@@ -1,4 +1,4 @@
- import usersDal from '../dal/customers-dal.js';
+ import usersDal from "../data-layers-logic/users-dal.js"
 
 const getAll = async () => {
     return await usersDal.getAll()

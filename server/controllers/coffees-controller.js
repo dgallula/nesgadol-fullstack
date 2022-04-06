@@ -1,5 +1,5 @@
 import express from 'express';
- import { addCoffee, getAll, deleteCoffee } from '../business-logic/coffees-bl';
+ import { addCoffee, getAll, deleteCoffee } from '../business-logic/coffees-bl.js';
 
 const coffeesRouter = express.Router();
 
