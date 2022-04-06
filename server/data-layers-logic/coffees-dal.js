@@ -31,7 +31,7 @@ const addCoffee = async (name, price,strenght , usersId) => {
 
     try {
         let res = await connection.promise().query(
-            `INSERT INTO coffees (name, price, strenght, email, usersId)
+            `INSERT INTO coffees (name, price, strenght, usersId)
             VALUES
             ('${name}','${price}','${strenght}', '${usersId}');`
         )

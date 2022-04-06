@@ -1,4 +1,4 @@
-// import customersDal from '../dal/customers-dal.js';
+ import usersDal from '../dal/customers-dal.js';
 
 const getAll = async () => {
     return await usersDal.getAll()

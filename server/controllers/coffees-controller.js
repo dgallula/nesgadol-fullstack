@@ -1,9 +1,9 @@
 import express from 'express';
-// import { addCustomer, getAll, deleteCustomer } from '../bl/customers-bl.js';
+ import { addCoffee, getAll, deleteCoffee } from '../business-logic/coffees-bl';
 
 const coffeesRouter = express.Router();
 
-coffeesRouter.get('/coffes', async (_, res) => {
+coffeesRouter.get('/coffees', async (_, res) => {
     let result = await getAll();
 
     if (!result.success) {
@@ -14,7 +14,7 @@ coffeesRouter.get('/coffes', async (_, res) => {
 })
 
 coffeesRouter.post('/coffees', async (req, res) => {
-    let result = await addCoffees(req.body);
+    let result = await addCoffee(req.body);
 
     if (!result.success) {
         res.status(500).send(result)
@@ -29,7 +29,7 @@ coffeesRouter.post('/coffees', async (req, res) => {
 })
 
 coffeesRouter.delete('/coffees/:id', async (req, res) => {
-    let result = await deleteCoffees(req.params.id);
+    let result = await deleteCoffee(req.params.id);
 
     if (!result.success) {
         res.status(500).send(result)

@@ -1,4 +1,4 @@
-// import customersDal from '../dal/customers-dal.js';
+ import coffeesDal from "../data-layers-logic/coffees-dal.js"
 
 
 const getAll = async () => {
@@ -6,7 +6,7 @@ const getAll = async () => {
 }
 
 const addCoffee = async (body) => {
-    return await coffeesDal.addCoffees(
+    return await coffeesDal.addCoffee(
          body.name, body.price, body.strehght, body.usersId)
 }
 
