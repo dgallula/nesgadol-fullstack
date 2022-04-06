@@ -1,3 +1,4 @@
+// import customersDal from '../dal/customers-dal.js';
 
 
 const getAll = async () => {
@@ -15,6 +16,6 @@ const deleteCoffee = async (id) => {
 
 export {
     getAll,
-    addUser,
-    deleteUser
+    addCoffee,
+    deleteCoffee
 }
